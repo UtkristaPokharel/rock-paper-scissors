@@ -23,8 +23,16 @@ console.log(getComputerChoice());
 
 
 const getUserChoice = () => {
-	let choices = prompt('Rock, Paper, or Scissors? (case-insensitive)').toString();
-	choices = choices.toLowerCase();
+	let isValidChoice = false;
+	let choices;
+	while (!isValidChoice) { // Loop until a valid choice is entered
+		choices = prompt('Rock, Paper, or Scissors? (case-insensitive)').toString();
+		choices = choices.toLowerCase();
+		isValidChoice = choice.includes(choices); // Check if entered choice is in the valid options
+		if (!isValidChoice) {
+			alert('Invalid choice! Please enter rock, paper, or scissors.');
+		}
+	}
 	return choices;
 }
 
@@ -70,6 +78,7 @@ const playRound = () => {
 document.getElementById('gobutton').addEventListener('click', () => {
 	document.getElementById('playresult').innerText = playRound();
 })
+
 
 
 
