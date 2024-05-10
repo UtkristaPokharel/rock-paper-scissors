@@ -1,0 +1,87 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	width: 100dvw;
+	height: 100dvh;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	width: 100vw;
+	height: 100vh;
+	background-color: #EB96C0;
+}
+
+.playerdisplay,
+.compdisplay {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	width: 350px;
+	height: 30%;
+
+}
+
+
+.playerdisplay, .compdisplay {
+	border: 5px solid rgb(0, 0, 0);
+	border-radius: 10px;
+	background-color: white;
+}
+.playerdisplay div{
+	display: flex;
+	justify-content: center;
+}
+.compdisplay div{
+	display: flex;
+	justify-content: center;
+}
+
+.play {
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	gap:30px;
+}
+
+.gobutton {
+
+	width: 150px;
+	height: 60px;
+	background-color:rgb(29, 246, 235);
+	border-radius: 10px;
+	border: none;
+}
+.gobutton:active{
+	animation-name: pressed;
+	animation-duration: 150ms;
+	animation-timing-function: linear;
+}
+@keyframes pressed {
+	33% {
+	    background-color: red;
+	}
+	66% {
+	    background-color: rgb(255, 1, 255);
+	}
+	100% {
+	    background-color: rgb(255, 89, 0);
+	}
+ }
+
+#oppchoice, #playchoice {
+	display: flex;
+	width: 100%;
+	height: 70%;
+	justify-content: center;
+	font-size: 7em;
+
+ }
